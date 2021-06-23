@@ -1,7 +1,7 @@
-Jira Issues Fetcher
-===================
+Jira Assignee Mailer
+====================
 
-Jira Issues Fetcher is a maven project that runs on jenikins to pull the issues as per the jql QUERY configured in $QUERY parameter and sends the mail to respective assignees.
+Jira Assignee Mailer is a maven project that runs on jenikins to pull the issues as per the jql QUERY configured in $QUERY parameter and sends the mail to respective assignees.
 
 # Steps to create a jeniknis job
 
@@ -11,17 +11,19 @@ Jira Issues Fetcher is a maven project that runs on jenikins to pull the issues 
 <img width="1391" alt="params" src="https://user-images.githubusercontent.com/13100987/123043119-7955cd00-d415-11eb-8e2b-bb2a86476733.png">
 
 - Move to Source Code Management configuration and configure git as given in the snapshot below. Check your git credentials before configuring them.
-<img width="1225" alt="git" src="https://user-images.githubusercontent.com/13100987/123043419-e4070880-d415-11eb-9e7f-817d3645b9f3.png">
+<img width="1244" alt="git" src="https://user-images.githubusercontent.com/13100987/123055395-7530ac00-d423-11eb-9ecd-709559b012a0.png">
+
 
 - Check "Use secret text(s) or file(s)" under Build Management and Configure Bindings for `JIRA_USERNAME` & `JIRA_PASSWORD` and supply credentials for your Jira system for authentication.
 <img width="1196" alt="jira" src="https://user-images.githubusercontent.com/13100987/123043948-a8207300-d416-11eb-8011-11a278c3c2e6.png">
 
 - Add a Build step as given in snapshot below.
-<img width="1172" alt="build" src="https://user-images.githubusercontent.com/13100987/123044275-136a4500-d417-11eb-9ab9-68da508d623c.png">
+<img width="1399" alt="build" src="https://user-images.githubusercontent.com/13100987/123055536-a315f080-d423-11eb-87f6-c4277a6012f7.png">
+
 
 - In the end add a post build action to archive the artifacts (issues file & emails file created) and editable email notification to send emails , taking benefits of issues file & emails file created as artifacts post build.
 * Note : Make use of editable email notification template to configure "from address" , "subject" and add bcc and cc if you wish to.
-<img width="1373" alt="post-build" src="https://user-images.githubusercontent.com/13100987/123052294-4b29ba80-d420-11eb-8e08-4f5c466b9e2b.png">
+<img width="1313" alt="mail" src="https://user-images.githubusercontent.com/13100987/123055767-da849d00-d423-11eb-9ebc-a85be1a9d4aa.png">
 
 
 # Paramters to be passed and steps to run
