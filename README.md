@@ -21,7 +21,7 @@ Jira Issues Fetcher is a maven project that runs on jenikins to pull the issues 
 
 - In the end add a post build action to archive the artifacts (issues file & emails file created) and editable email notification to send emails , taking benefits of issues file & emails file created as artifacts post build.
 * Note : Make use of editable email notification template to configure "from address" , "subject" and add bcc and cc if you wish to.
-<img width="1424" alt="post_build" src="https://user-images.githubusercontent.com/13100987/123044881-e8342580-d417-11eb-9113-df774f01aff4.png">
+<img width="1373" alt="post-build" src="https://user-images.githubusercontent.com/13100987/123052294-4b29ba80-d420-11eb-8e08-4f5c466b9e2b.png">
 
 
 # Paramters to be passed and steps to run
