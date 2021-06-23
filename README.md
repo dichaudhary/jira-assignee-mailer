@@ -31,9 +31,9 @@ Jql query (QUERY) & JIRA_HOST_URL and are required to be passed as parameters wh
 Withing QUERY we can give header for the query to be sent as part of mail, the query and header should be separated with (>>).
 Example : labels in (no-automated-test) AND component = Sustenance AND project = NPR >> Open Issues for 6.5.10
 
-How it works
-The script runs and reads parameters from $QUERY parameter and perform below steps.
+# How it works
 
+- The script runs and reads parameters from $QUERY parameter and perform below steps.
 - Login to jira using session API.
 - Get query and header by splitting with (>>) if (>>) is added.
 - Get issues for each query configured.
